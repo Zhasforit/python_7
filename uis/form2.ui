@@ -110,7 +110,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Выбрано:</string>
+     <string>Выбрано: </string>
     </property>
    </widget>
    <widget class="QRadioButton" name="radioButton_4">
@@ -168,6 +168,9 @@
     </property>
     <property name="text">
      <string>Химия</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QRadioButton" name="radioButton_3">

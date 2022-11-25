@@ -125,6 +125,9 @@
     <property name="text">
      <string>Школьное</string>
     </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QCheckBox" name="checkBox_2">
     <property name="geometry">

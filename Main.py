@@ -17,7 +17,7 @@ class Form1(QtWidgets.QMainWindow):
         super(Form1, self).__init__()
         uic.loadUi('uis/form1.ui', self)
 
-        self.setWindowTitle('Приветсвтие')
+        self.setWindowTitle('Приветствие')
         self.setWindowIcon(QtGui.QIcon('images/icon.png'))
 
         self.btn_exit.clicked.connect(self.close)
@@ -46,6 +46,9 @@ class Form2(QtWidgets.QMainWindow):
         self.comboBox.activated.connect(self.handleActivated)
         self.btn_back.clicked.connect(self.back)
         self.btn_next.clicked.connect(self.next)
+
+        self.handleActivated(0)
+
 
     def handleActivated(self, index):
         answers[0] = self.comboBox.itemText(index)
@@ -89,6 +92,9 @@ class Form3(QtWidgets.QMainWindow):
 
         self.btn_back.clicked.connect(self.back)
         self.btn_next.clicked.connect(self.next)
+
+        self.onToggled(self.radioButton_1)
+
 
     def onToggled(self, radiobutton):
         if radiobutton.isChecked():
@@ -136,6 +142,9 @@ class Form4(QtWidgets.QMainWindow):
 
         self.btn_back.clicked.connect(self.back)
         self.btn_next.clicked.connect(self.next)
+
+        self.onToggled(self.checkBox)
+
 
     def onToggled(self, checkbox):
         if checkbox.isChecked():
